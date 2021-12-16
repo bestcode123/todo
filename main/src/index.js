@@ -8,14 +8,16 @@ import Auth0Login from './components/auth0/login';
 import Auth0Logout from './components/auth0/logout';
 
 ReactDOM.render(
-  <Auth0Provider
-    domain="burgerapps.eu.auth0.com"
-    clientId="m4GkFJ0l9ethoss2ARyLnoOyKqwdul5T"
-    redirectUri={window.location.origin}
-  >
-    <Auth0Login />
-    <br></br><br></br>
-    <Auth0Logout />
-  </Auth0Provider>,
+  <div id='root2'>
+    <Auth0Provider
+      domain="burgerapps.eu.auth0.com"
+      clientId="m4GkFJ0l9ethoss2ARyLnoOyKqwdul5T"
+      redirectUri={window.location.origin}
+    >
+      <Auth0Login />
+      <br></br><br></br>
+      <Auth0Logout />
+    </Auth0Provider>
+  </div>,
   document.getElementById('root')
 );
